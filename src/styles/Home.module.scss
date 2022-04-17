@@ -1,0 +1,128 @@
+/**
+  * ページ全体
+  * - 全体を中央寄せに
+  * - 背景は水色
+  */
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2ffff;
+}
+
+/**
+  * タイトル
+  * - 初期表示は中央に表示されるようにする
+  * - ページ下部のコンテナが表示されるのに合わせて上に移動
+  */
+.title {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: titleAnime 8s ease-in-out 0s 1;
+}
+
+@keyframes titleAnime {
+  0% {
+    top: 145px;
+    left: 2000px;
+  }
+  40% {
+    top: 145px;
+    left: 0;
+  }
+  50% {
+    top: 145px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/**
+  * ねこ ボタン わん の順に横に並べる
+  * - 初期表示は hide
+  */
+.container {
+  display: flex;
+}
+
+.neko {
+  animation: containerAnime 10s ease-in-out 0s 1
+    , nekowanRotateAnime 1s ease-in-out 10s 1
+    , nekoRotateAnime 5s ease-in-out 11s infinite;
+}
+.wan {
+  animation: containerAnime 10s ease-in-out 0s 1
+    , nekowanRotateAnime 1s ease-in-out 10s 1
+    , wanRotateAnime 5s ease-in-out 11s infinite;
+}
+
+/* スタート いろいろ の順にボタンを縦にならべる */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  a {
+      animation: containerAnime 10s ease-in-out 0s 1
+      , buttonRotateAnime 1s ease-in-out 10s 1;
+  }
+}
+
+@keyframes containerAnime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes nekowanRotateAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes buttonRotateAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes nekoRotateAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wanRotateAnime {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
