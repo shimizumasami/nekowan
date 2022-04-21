@@ -23,19 +23,14 @@
   position: relative;
   top: 0;
   left: 0;
-  animation: titleAnime 8s ease-in-out 0s 1;
+  animation: titleAnime 6s ease-in-out 0s 1;
 }
-
 @keyframes titleAnime {
   0% {
     top: 145px;
     left: 2000px;
   }
-  40% {
-    top: 145px;
-    left: 0;
-  }
-  50% {
+  60% {
     top: 145px;
     left: 0;
   }
@@ -53,24 +48,42 @@
   display: flex;
 }
 
+/**
+  * ねこ わん
+  * - 初期は非表示
+  * - タイトルが上に移動するのに合わせて表示
+  * - 表示後1回転
+  * - その後ねことわん交互に回転ループ
+  */
 .neko {
-  animation: containerAnime 10s ease-in-out 0s 1
-    , nekowanRotateAnime 1s ease-in-out 10s 1
-    , nekoRotateAnime 5s ease-in-out 11s infinite;
+  animation: containerAnime 7s ease-in-out 0s 1
+    , nekowanRotateAnime 1s ease-in-out 7s 1
+    , nekoRotateAnime 5s ease-in-out 8s infinite;
 }
 .wan {
-  animation: containerAnime 10s ease-in-out 0s 1
-    , nekowanRotateAnime 1s ease-in-out 10s 1
-    , wanRotateAnime 5s ease-in-out 11s infinite;
+  animation: containerAnime 7s ease-in-out 0s 1
+    , nekowanRotateAnime 1s ease-in-out 7s 1
+    , wanRotateAnime 5s ease-in-out 8s infinite;
 }
 
-/* スタート いろいろ の順にボタンを縦にならべる */
+/**
+  * スタート いろいろ の順にボタンを縦にならべる
+  * - 初期は非表示
+  * - タイトルが上に移動するのに合わせて表示
+  * - 表示後1回転
+  * - マウスオーバーで1.2倍の大きさに
+  */
 .buttons {
   display: flex;
   flex-direction: column;
+
   a {
-      animation: containerAnime 10s ease-in-out 0s 1
-      , buttonRotateAnime 1s ease-in-out 10s 1;
+    animation: containerAnime 7s ease-in-out 0s 1
+    , buttonRotateAnime 1s ease-in-out 7s 1;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
   }
 }
 
