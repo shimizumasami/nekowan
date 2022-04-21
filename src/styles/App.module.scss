@@ -1,0 +1,19 @@
+/**
+  * ページ全体
+  * - 全体を中央寄せに
+  * - 背景は水色
+  */
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b2ffff;
+  background-image: url("/img/app.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  
