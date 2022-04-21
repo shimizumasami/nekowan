@@ -16,20 +16,20 @@ export default function Home() {
 
         <div className={styles.container}>
           <div className={styles.neko}>
-            <Image src="/img/home_neko.png" width="240" height="240" alt="ねこ" />
+            <Image src="/img/home_neko_c.png" width="240" height="240" alt="ねこ" />
           </div>
 
           <div className={styles.buttons}>
             <a href="/app">
-              <Image src="/img/home_btn_start.png" width="290" height="150" alt="スタート" />
+              <Image src="/img/home_btn_start_c.png" width="290" height="150" alt="スタート" />
             </a>
             <a href="/etc">
-              <Image src="/img/home_btn_etc.png" width="290" height="150" alt="いろいろ" />
+              <Image src="/img/home_btn_etc_c.png" width="290" height="150" alt="いろいろ" />
             </a>
           </div>
 
           <div className={styles.wan}>
-            <Image src="/img/home_wan.png" width="240" height="240" alt="わん" />
+            <Image src="/img/home_wan_c.png" width="240" height="240" alt="わん" />
           </div>
         </div>
       </main>
